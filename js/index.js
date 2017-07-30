@@ -30,6 +30,7 @@ worker.addEventListener('message', function (e) {
   console.log('Worker data: ', e.data);
   switch (e.data.id) {
     case 'fetch':
+    document.getElementById('main').innerHTML = '';
       crazyTemplate('info', e.data.response.info, 'main');
       break;
     case 'users':

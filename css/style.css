@@ -11,9 +11,9 @@
 
 .container .wrapper .main {
   padding: 1.2vw;
-  border-top: .2vw dashed #333333;
-  border-left: .2vw dashed #333333;
-  border-bottom: .2vw dashed #333333;
+  border-top: 1px solid #9a9a9a;
+  border-left: 1px solid #9a9a9a;
+  border-bottom: 1px solid #9a9a9a;
 }
 
 .container .wrapper .main .flex img {
@@ -32,7 +32,7 @@
 
 .container .wrapper .sidebar {
   padding: 1.2vw;
-  border: .2vw dashed #333333;
+  border: 1px solid #9a9a9a;
 }
 
 .container .wrapper .sidebar .flex img {
@@ -47,4 +47,10 @@
 .container .wrapper .sidebar .flex .info {
   padding: .2vw;
   font-size: .9rem;
+}
+
+h1,
+h2 {
+  margin: .1vw;
+  text-align: center;
 }
