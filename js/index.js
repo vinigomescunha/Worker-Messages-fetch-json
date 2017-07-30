@@ -1,5 +1,5 @@
 var reloadDate = new Date().getTime();
-var host = window.location.href;
+var host = window.location.href.replace(/[^\\\/]*$/, '');
 var worker = new Worker(host + '/js/worker.js?date=' + reloadDate);
 worker.addEventListener('message', function (e) {
   console.log('Worker data: ', e.data);
