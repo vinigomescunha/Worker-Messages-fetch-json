@@ -5,7 +5,8 @@ var endpoints = {
   info: host + '/data/info.json?date=' + reloadDate,
   users: host + '/data/users.json?date=' + reloadDate,
   worker: host + '/js/worker.js?date=' + reloadDate
-}
+};
+
 var tests = {
   testInfo: {
     id: 'fetch',
@@ -22,7 +23,9 @@ var tests = {
     type: 'json' // type: json, text or blob
   },
 };
+
 var worker = new Worker(endpoints['worker']);
+
 worker.addEventListener('message', function (e) {
   console.log('Worker data: ', e.data);
   switch (e.data.id) {
@@ -38,20 +41,20 @@ worker.addEventListener('message', function (e) {
   }
 }, false);
 
-worker.postMessage(tests['testJson']);
-worker.postMessage(tests['testVars']);
-worker.postMessage(tests['testJInfo']);
+for (var test in tests) {
+  worker.postMessage(tests[test]);
+}
 
 var crazyTemplate = function (templateId, data, containerId) {
+  var templateHTML = document.getElementById(templateId).innerHTML;
   var container = document.getElementById(containerId);
-  var template = document.getElementById(templateId);
   data.forEach(function (items, index) {
     var fragment = document.createElement('div');
-    var str = template.innerHTML;
+    var str = templateHTML;
     for (var i in items) {
       str = str.replace(new RegExp('%' + i + '%', 'gm'), items[i]);
       fragment.innerHTML = str;
     }
     container.appendChild(fragment);
   });
-}
+};
