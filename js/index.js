@@ -1,5 +1,6 @@
 var reloadDate = new Date().getTime();
-var worker = new Worker('/js/worker.js?date=' + reloadDate);
+var host = window.location.href;
+var worker = new Worker(host + '/js/worker.js?date=' + reloadDate);
 worker.addEventListener('message', function (e) {
   console.log('Worker data: ', e.data);
   switch (e.data.id) {
@@ -17,7 +18,7 @@ worker.addEventListener('message', function (e) {
 var tests = {
   testJson: {
     id: 'fetch',
-    url: window.location.href + '/data/info.json?date=' + reloadDate,
+    url: host + '/data/info.json?date=' + reloadDate,
     type: 'json' // type: json, text or blob
   },
   testVars: {
@@ -26,7 +27,7 @@ var tests = {
   },
   testJInfo: {
     id: 'users',
-    url: window.location.href + '/data/users.json?date=' + reloadDate,
+    url: host + '/data/users.json?date=' + reloadDate,
     type: 'json' // type: json, text or blob
   },
 }
