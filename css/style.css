@@ -1,0 +1,28 @@
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.wrapper {
+    display: inline-flex;
+}
+
+.sidebar {
+    border: 1px dashed #333333;
+    padding: .1vw;
+}
+
+.flex {
+    display: inline-flex;
+}
+
+.info {
+    vertical-align: top;
+}
+
+.flex img,
+.flex .info {
+    padding: 2px;
+}

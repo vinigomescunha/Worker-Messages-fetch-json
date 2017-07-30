@@ -1,0 +1,40 @@
+{
+    "title": "Recent queue...",
+    "listUsers": [{
+        "id": 123,
+        "name": "Lorem",
+        "image": "http://placehold.it/50x50/ff00ee/00ff00&text=Lorem"
+    }, {
+        "id": 124,
+        "name": "Ipsum",
+        "image": "http://placehold.it/50x50/00ccdd/ffffdd&text=Ipsum"
+    }, {
+        "id": 125,
+        "name": "Dolor",
+        "image": "http://placehold.it/50x50/ffccaa/00ccff&text=Dolor"
+    }, {
+        "id": 126,
+        "name": "Sit Amet",
+        "image": "http://placehold.it/50x50/fcaedf/fdc345&text=Sit Amet"
+    }, {
+        "id": 127,
+        "name": "Lorem Lorem",
+        "image": "http://placehold.it/50x50/fccdd0/098cdf&text=Lorem Lorem"
+    }, {
+        "id": 128,
+        "name": "LipsumLipsum",
+        "image": "http://placehold.it/50x50/cf3300/ffffdd&text=LipsumLipsum"
+    }, {
+        "id": 129,
+        "name": "DolorDolor",
+        "image": "http://placehold.it/50x50/ffddcc/334411&text=DolorDolor"
+    }, {
+        "id": 130,
+        "name": "SitSit",
+        "image": "http://placehold.it/50x50/0c9f99/d0d0d0&text=SitSit"
+    }, {
+        "id": 131,
+        "name": "AmetAmet",
+        "image": "http://placehold.it/50x50/dcaf69/00aea0&text=AmetAmet"
+    }]
+}

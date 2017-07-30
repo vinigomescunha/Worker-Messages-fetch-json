@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <title>Worker Messages</title>
+</head>
+<link rel='stylesheet' type='text/css' href='css/style.css'>
+
+<body>
+  <div class="container">
+    <h1>Worker Messages - fetch from json </h1>
+    <div class="wrapper">
+      <div id="main" class="main"></div>
+      <div id="sidebar" class="sidebar"></div>
+    </div>
+  </div>
+</body>
+<script src="js/index.js"></script>
+<script type="crazytemplate:P" id="info">
+  <div class="flex">
+    <img src="%img%" />
+    <span class="info">
+      <b>USERNAME: </b> %username% <br>
+      <b>EMAIL: </b> %email% <br>
+      <b>ADDRESS: </b> %address%
+    </span>
+  </div>
+</script>
+<script type="crazytemplate:P" id="users">
+  <div class="flex">
+    <img src="%image%" />
+    <span class="info">
+      <b>ID: </b> %id% <br>
+      <b>NAME: </b> %name%
+    </span>
+  </div>
+</script>
+
+</html>
