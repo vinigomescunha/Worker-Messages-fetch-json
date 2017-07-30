@@ -2,27 +2,27 @@
     "info": [{
         "username": "Lorem Ipsum",
         "email": "lorem@lorem-ipsum.com",
-        "img": "http://placehold.it/100x100/ffddcc/090909&text=Lorem",
+        "img": "https://placehold.it/100x100/ffddcc/090909&text=Lorem",
         "address": "Aenean iaculis interdum semper. Fusce eleifend pretium dolor id elementum."
     }, {
         "username": "Lipsum Dolor Sit",
         "email": "dolor-sit@amet-lipsum.com",
-        "img": "http://placehold.it/100x100/0044d6/ff5566&text=Lipsum",
+        "img": "https://placehold.it/100x100/0044d6/ff5566&text=Lipsum",
         "address": "Praesent placerat velit vel sem vulputate, eget suscipit orci molestie."
     }, {
         "username": "Dolor Sit Amet",
         "email": "dolor-sit-amet@sit-amet-ipsum.com",
-        "img": "http://placehold.it/100x100/d459f0/fddfa0&text=Dolor",
+        "img": "https://placehold.it/100x100/d459f0/fddfa0&text=Dolor",
         "address": "Vivamus pulvinar, nisl sed tempus ultricies, arcu risus nisi quis ex."
     }, {
         "username": "Consectetur Adipiscing Elit",
         "email": "adipiscing@consectetur-elit.com",
-        "img": "http://placehold.it/100x100/c9d5e8/8800ff&text=Consectetur",
+        "img": "https://placehold.it/100x100/c9d5e8/8800ff&text=Consectetur",
         "address": " Vestibulum felis ex, placerat vel tristique quis, rhoncus a libero."
     }, {
         "username": "Eiusmod Tempor",
         "email": "eiusmod@sit-amet-ipsum.com",
-        "img": "http://placehold.it/100x100/445dc6/ccaa44&text=Eiusmod",
+        "img": "https://placehold.it/100x100/445dc6/ccaa44&text=Eiusmod",
         "address": "Vivamus condimentum ante dolor, non eleifend tortor volutpat sit amet"
     }]
 }
