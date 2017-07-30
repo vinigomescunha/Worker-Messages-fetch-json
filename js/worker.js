@@ -14,10 +14,7 @@ class Fetch {
 
 var fetchInfo = function (event) {
   var ev = event;
-  var f = new Fetch();
-  u = ev.data.url;
-  console.log('event', event.target.origin)
-  f.get(u)
+  new Fetch().get(ev.data.url)
     .then(function (response) {
       if (response.ok) {
         response[ev.data.type]().then(function (dataResponse) {

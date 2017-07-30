@@ -1,6 +1,28 @@
 var reloadDate = new Date().getTime();
 var host = window.location.href.replace(/[^\\\/]*$/, '');
-var worker = new Worker(host + '/js/worker.js?date=' + reloadDate);
+
+var endpoints = {
+  info: host + '/data/info.json?date=' + reloadDate,
+  users: host + '/data/users.json?date=' + reloadDate,
+  worker: host + '/js/worker.js?date=' + reloadDate
+}
+var tests = {
+  testInfo: {
+    id: 'fetch',
+    url: endpoints['info'],
+    type: 'json' // type: json, text or blob
+  },
+  testDebug: {
+    id: 'assert',
+    test: ['Fetch', 'fetchInfo', , 'existMethod', 'noexistMethod']
+  },
+  testUsers: {
+    id: 'users',
+    url: endpoints['users'],
+    type: 'json' // type: json, text or blob
+  },
+};
+var worker = new Worker(endpoints['worker']);
 worker.addEventListener('message', function (e) {
   console.log('Worker data: ', e.data);
   switch (e.data.id) {
@@ -15,22 +37,6 @@ worker.addEventListener('message', function (e) {
       console.warn('No Valid Params!');
   }
 }, false);
-var tests = {
-  testJson: {
-    id: 'fetch',
-    url: host + '/data/info.json?date=' + reloadDate,
-    type: 'json' // type: json, text or blob
-  },
-  testVars: {
-    id: 'assert', // this id call assert console 
-    test: ['Fetch', 'fetchInfo', , 'existMethod', 'noexistMethod']
-  },
-  testJInfo: {
-    id: 'users',
-    url: host + '/data/users.json?date=' + reloadDate,
-    type: 'json' // type: json, text or blob
-  },
-}
 
 worker.postMessage(tests['testJson']);
 worker.postMessage(tests['testVars']);
