@@ -2,9 +2,9 @@ var reloadDate = new Date().getTime();
 var host = window.location.href.replace(/[^\\\/]*$/, '');
 
 var endpoints = {
-  info: host + '/data/info.json?date=' + reloadDate,
-  users: host + '/data/users.json?date=' + reloadDate,
-  worker: host + '/js/worker.js?date=' + reloadDate
+  info: host + 'data/info.json?date=' + reloadDate,
+  users: host + 'data/users.json?date=' + reloadDate,
+  worker: host + 'js/worker.js?date=' + reloadDate
 };
 
 var tests = {
@@ -46,6 +46,15 @@ for (var test in tests) {
 }
 
 var crazyTemplate = function (templateId, data, containerId) {
+  var filterTags = function (templateHTML) {
+    var specialTags = ['src'];
+    specialTags.forEach(
+      function (tag) {
+        templateHTML = templateHTML.replace(new RegExp('%' + tag + '%', 'gm'), tag);
+      }
+    );
+    return templateHTML;
+  }
   var templateHTML = document.getElementById(templateId).innerHTML;
   var container = document.getElementById(containerId);
   data.forEach(function (items, index) {
@@ -55,6 +64,7 @@ var crazyTemplate = function (templateId, data, containerId) {
       str = str.replace(new RegExp('%' + i + '%', 'gm'), items[i]);
       fragment.innerHTML = str;
     }
+    fragment.innerHTML = filterTags(fragment.innerHTML);
     container.appendChild(fragment);
   });
 };
